@@ -410,7 +410,7 @@ class Kubernetes(object):
     @staticmethod
     def _get_labels(extra_labels=None):
         if extra_labels is None:
-            extra_labels = {"cluster-autoscaler.kubernetes.io/safe-to-evict": "false"}
+            extra_labels = {}
         env_labels = KUBERNETES_LABELS.split(",") if KUBERNETES_LABELS else []
         env_labels = parse_kube_keyvalue_list(env_labels, False)
         labels = {**env_labels, **extra_labels}
