@@ -296,6 +296,7 @@ class Kubernetes(object):
                     "metaflow/project_name": current.project_name,
                     "metaflow/branch_name": current.branch_name,
                     "metaflow/project_flow_name": current.project_flow_name,
+                    "cluster-autoscaler.kubernetes.io/safe-to-evict": "false"
                 }
             )
 
