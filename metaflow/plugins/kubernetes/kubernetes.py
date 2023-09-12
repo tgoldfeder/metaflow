@@ -308,7 +308,7 @@ class Kubernetes(object):
             .annotation("cluster-autoscaler.kubernetes.io/safe-to-evict", "false")
             .annotation("metaflow/step_name", step_name)
             .annotation("metaflow/task_id", task_id)
-            .annotation("metaflow/attempt", '1')
+            .annotation("metaflow/attempt", attempt)
             .label("app.kubernetes.io/name", "metaflow-task")
             .label("app.kubernetes.io/part-of", "metaflow")
         )
